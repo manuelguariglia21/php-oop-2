@@ -1,9 +1,12 @@
 <?php
   require_once __DIR__.'/classes/Product.php';
   require_once __DIR__.'/classes/Smartphone.php';
+  require_once __DIR__.'/classes/User.php';
+
   $new_product = new Smartphone('Iphone 13', 'Apple', 930, 64,'red', 'Nano - eSIM');
   $new_product->setDiscount(10);
-  var_dump($new_product)
+
+  $user = new User('Manuel', 'Guariglia', 'manuelguariglia@gmail.com');
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -14,6 +17,13 @@
   <title>Online Shop</title>
 </head>
 <body>
+
+  <p>
+    Benvenuto
+    <?php
+      echo $user->getName();
+    ?>
+  </p>
 
   <h1>
     <?php
