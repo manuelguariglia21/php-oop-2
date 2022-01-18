@@ -1,3 +1,8 @@
+<?php
+  require_once __DIR__.'/classes/Product.php';
+  $new_product = new Product('baggie jeans', 'Karl Kani', 70);
+  var_dump($new_product)
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,6 +12,8 @@
   <title>Online Shop</title>
 </head>
 <body>
-  
+  <h1>
+
+  </h1>
 </body>
 </html>
