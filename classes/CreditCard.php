@@ -26,7 +26,7 @@ class CreditCard{
 
   public function checkNumber($_number) {
     if (!is_int($_number) || strlen($_number) !== 12) {
-    throw new Exception('Numero carta non valido');
+    throw new Exception('Numero carta non valido ');
     }
     return $_number;
   }

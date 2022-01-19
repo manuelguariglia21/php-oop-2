@@ -13,7 +13,11 @@
 
   $user->setCreditCard(555555555555, 'Manuel Guariglia', 578, 12, 20);
   $yourcard = $user->getCreditCard();
-  var_dump($user);
+  $user->route = "Via Montenapoleone";
+  $user->town = "Milano";
+  $user->zip = 20100;
+  $user->Country = 'Italia';
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -58,6 +62,12 @@
       echo $new_product->getSalePrice();
     ?>
     €
+  </p>
+  <p>
+    Address:
+    <?php
+      echo $user->route;
+    ?>
   </p>
 
 
