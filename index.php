@@ -1,12 +1,19 @@
 <?php
+  use FFI\Exception;
   require_once __DIR__.'/classes/Product.php';
   require_once __DIR__.'/classes/Smartphone.php';
   require_once __DIR__.'/classes/User.php';
+  require_once __DIR__.'/classes/CreditCard.php';
+  require_once __DIR__.'/classes/Customer.php';
 
   $new_product = new Smartphone('Iphone 13', 'Apple', 930, 64,'red', 'Nano - eSIM');
   $new_product->setDiscount(10);
 
-  $user = new User('Manuel', 'Guariglia', 'manuelguariglia@gmail.com');
+  $user = new Customer('Manuel', 'Guariglia', 'manuelguariglia@gmail.com');
+
+  $user->setCreditCard(555555555555, 'Manuel Guariglia', 578, 12, 20);
+  $yourcard = $user->getCreditCard();
+  var_dump($user);
 ?>
 <!DOCTYPE html>
 <html lang="en">
